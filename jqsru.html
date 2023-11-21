@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .topnav {
+  overflow: hidden;
+  background-color: green;
+  height: 60px;
+  width: 1580px;
+  display: flex;
+  flex-direction: row;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+h2{
+  text-align: center;
+  background-color: green;
+}
+</style>
+</head>
+<body>
+  <div class="topnav">
+  <a href="samgauru.html">Главный</a>
+  <a href="bizru.html">Контакт</a>
+  <a href="jqs.html">Қаз</a>
+</div>
+
+<h2>ЧАСТО ЗАДАЕМЫ ВОПРОСЫ</h2>
+
+<button class="accordion">Когда будет доставка?</button>
+<div class="panel">
+  <p>Здраствуйте. Доставка будет течение 1 и 2 неделья.</p>
+</div>
+
+<button class="accordion">Как я могу узнать где моя доставка?</button>
+<div class="panel">
+  <p>Здраствуйте. Вам будет предоставлен трек-номер. Его можно посмотреть на сайте Казпочты.</p>
+</div>
+
+<button class="accordion">Как производится оплата?</button>
+<div class="panel">
+  <p>Оплата банковским переводом или налияным.</p>
+</div>
+<button class="accordion">Будет скидки?</button>
+<div class="panel">
+  <p>Получите скидку 30% при покупке нескольких товаров</p>
+</div>
+<button class="accordion">Будет акций?</button>
+<div class="panel">
+  <p>Помимо электронных товаров (ноутбук, телефон, DVD-плеер) и инвалидных колясок в подарок дарятся смарт часы и наушники Air Pods.
+   В комплект некоторых подгузников и пеленков входят стиральный порошок или шампунь и влажные салфетки.</p>
+</div>
+<button class="accordion">Возможна ли замена заказанного товара нерабочим (электротовары)?</button>
+<div class="panel">
+  <p>Если товар придет к вам в нераспечатанном виде (в заводской упаковке), то мы можем обменять товар.</p>
+</div>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>

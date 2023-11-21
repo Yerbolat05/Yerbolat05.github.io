@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+  background-image: url("backg.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  background-color: green;
+  height: 60px;
+  width: 1580px;
+  display: flex;
+  flex-direction: row;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+h2{
+  text-align: center;
+  background-color: green;
+}
+</style>
+</head>
+<body>
+   <div class="topnav">
+  <a href="samgau.html">Басты бет</a>
+  <a href="biz.html">Байланыс</a>
+  <a href="jqsru.html">Русс</a>
+</div>
+
+<h2>ЖИІ ҚОЙЫЛАТЫН СҰРАҚТАР</h2>
+
+<button class="accordion">Тапсырыс қанша уақытта келеді?</button>
+<div class="panel">
+  <p>Сәлеметсіз бе. Тапсырыс рәсімделген сәттен бастап, бір-екі апта аралығында болады.</p>
+</div>
+
+<button class="accordion">Тапсырыстың қай жерде келе жатқанын қалай көруге болады?</button>
+<div class="panel">
+  <p>Сәлеметсіз бе. Сізге трек нөмір беріледі. Сол арқылы Қазпошта сайтынан көруге болады</p>
+</div>
+
+<button class="accordion">Төлем қалай жүзеге асады?</button>
+<div class="panel">
+  <p>Төлем банк аудармдары арқылы</p>
+</div>
+<button class="accordion">Қандай жеңілдіктер болады?</button>
+<div class="panel">
+  <p>Бірнеше тауар алсаңыз, 30% жеіңілдік болады</p>
+  </div>
+<button class="accordion">Қандай акциялар болады?</button>
+<div class="panel">
+  <p>Электроникалық тауарларға (ноутбук, телефон, двд ойнатқыш) және мүгедек арбаларына қосымша смарт сағатпен бірге Air Pods құлаққабы сыйлыққа беріледі.
+  Кейбір жөргектер мен жаялықтарға кір жуатын ұнтақ немесе сусабын және ылғал сүргіткіштер беріледі </p>
+</div>
+<button class="accordion">Тапсырыс берілген тауар істен шықса (электротехникалық тауар) ауыстыруға болады ма?</button>
+<div class="panel">
+  <p>Егер тауар сізге ашылмаған күйде (зауыдтық қамтамада) келсе, онда тауарды ауыстырып бере аламыз </p>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
